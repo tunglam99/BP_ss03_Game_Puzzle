@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="anh1()"> <img id="show1" src="anh/funny-cat1_part1x1.jpg" width="500px" height="100px"></button><br>
+    <button type="button" onclick="anh2()"> <img id="show2" src="anh/monkey_part2x1.jpg" width="500px" height="100px"></button><br>
+    <button type="button" onclick="anh3()"> <img id="show3" src="anh/panda_swap_part3x1.jpg" width="500px" height="100px"></button><br>
+    <button type="button" onclick="anh4()"> <img id="show4" src="anh/funny-cat1_part4x1.jpg" width="500px" height="100px"></button><br>
+    <button type="button" onclick="anh5()"> <img id="show5" src="anh/panda_swap_part5x1.jpg" width="500px" height="100px"></button><br>
+
+</form>
+
+<script>
+    let cat1 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/funny-cat1_part1x1.jpg";
+    let cat2 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/funny-cat1_part2x1.jpg";
+    let cat3 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/funny-cat1_part3x1.jpg";
+    let cat4 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/funny-cat1_part4x1.jpg";
+    let cat5 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/funny-cat1_part5x1.jpg";
+
+    let monkey1 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/monkey_part1x1.jpg";
+    let monkey2 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/monkey_part2x1.jpg";
+    let monkey3 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/monkey_part3x1.jpg";
+    let monkey4 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/monkey_part4x1.jpg";
+    let monkey5 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/monkey_part5x1.jpg";
+
+    let panda1 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/panda_swap_part1x1.jpg";
+    let panda2 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/panda_swap_part2x1.jpg";
+    let panda3 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/panda_swap_part3x1.jpg";
+    let panda4 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/panda_swap_part4x1.jpg";
+    let panda5 = "http://localhost:53144/BP_ss03_Game_Puzzle/anh/panda_swap_part5x1.jpg";
+
+    function anh1() {
+        if(document.getElementById("show1").src === cat1){
+            document.getElementById("show1").src = monkey1;
+        } else if (document.getElementById("show1").src===monkey1){
+            document.getElementById("show1").src = panda1;
+            }else if (document.getElementById("show1").src === panda1){
+            document.getElementById("show1").src = cat1;
+        }
+        kiemtra();
+    }
+    function anh2() {
+        if(document.getElementById("show2").src == cat2){
+            document.getElementById("show2").src = monkey2;
+        } else if (document.getElementById("show2").src==monkey2){
+            document.getElementById("show2").src = panda2;
+        }else if (document.getElementById("show2").src == panda2){
+            document.getElementById("show2").src = cat2;
+        }
+        kiemtra();
+    }
+    function anh3() {
+        if(document.getElementById("show3").src == cat3){
+            document.getElementById("show3").src = monkey3;
+        } else if (document.getElementById("show3").src==monkey3){
+            document.getElementById("show3").src = panda3;
+        }else if (document.getElementById("show3").src == panda3){
+            document.getElementById("show3").src = cat3;
+        }
+        kiemtra();
+    }
+    function anh4() {
+        if(document.getElementById("show4").src == cat4){
+            document.getElementById("show4").src = monkey4;
+        } else if (document.getElementById("show4").src == monkey4){
+            document.getElementById("show4").src = panda4;
+        }else if (document.getElementById("show4").src == panda4){
+            document.getElementById("show4").src = cat4;
+        }
+        kiemtra();
+    }
+    function anh5() {
+        if(document.getElementById("show5").src == cat5){
+            document.getElementById("show5").src = monkey5;
+        } else if (document.getElementById("show5").src==monkey5){
+            document.getElementById("show5").src = panda5;
+        }else if (document.getElementById("show5").src == panda5){
+            document.getElementById("show5").src = cat5;
+        }
+        kiemtra();
+    }
+
+
+    function kiemtra() {
+        if ((document.getElementById("show1").src == cat1) &&
+            (document.getElementById("show2").src == cat2) &&
+            (document.getElementById("show3").src == cat3) &&
+            (document.getElementById("show4").src == cat4) &&
+            (document.getElementById("show5").src == cat5)) {
+            alert("xin chuc mung");
+        } else if ((document.getElementById("show1").src == monkey1) &&
+            (document.getElementById("show2").src == monkey2) &&
+            (document.getElementById("show3").src == monkey3) &&
+            (document.getElementById("show4").src == monkey4) &&
+            (document.getElementById("show5").src == monkey5)) {
+            alert("xin chuc mung");
+        } else if ((document.getElementById("show1").src == monkey1) &&
+            (document.getElementById("show2").src == monkey2) &&
+            (document.getElementById("show3").src == monkey3) &&
+            (document.getElementById("show4").src == monkey4) &&
+            (document.getElementById("show5").src == monkey5)) {
+            alert("xin chuc mung");
+        }
+    }
+</script>
+</body>
+</html>
